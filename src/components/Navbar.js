@@ -10,7 +10,7 @@ const linkStyles = {
   color: "white",
 };
 
-function Navbar({ setIsLoggedIn }) {
+function NavBar({ setIsLoggedIn }) {
   const history = useHistory();
 
   function handleLogout() {
@@ -22,11 +22,8 @@ function Navbar({ setIsLoggedIn }) {
     <div>
       <NavLink
         to="/"
-        /* set exact so it knows to only set activeStyle when route is deeply equal to link */
         exact
-        /* add styling to Navlink */
         style={linkStyles}
-        /* add prop for activeStyle */
         activeStyle={{
           background: "darkblue",
         }}
@@ -58,4 +55,4 @@ function Navbar({ setIsLoggedIn }) {
   );
 }
 
-export default Navbar;
+export default NavBar;
